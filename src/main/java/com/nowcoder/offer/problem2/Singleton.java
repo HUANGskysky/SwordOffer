@@ -1,0 +1,22 @@
+package com.nowcoder.offer.problem2;
+
+/**
+ * 静态内部类实现的线程安全的单例
+ * @author 哓哓
+ *
+ */
+public class Singleton {
+	
+	private Singleton() {
+		
+	}
+	
+	private static class SingletonHolder {
+		private static final Singleton unqiqueInstance = new Singleton();
+	}
+	
+	public static Singleton getInstance() {
+		return SingletonHolder.unqiqueInstance;
+	}
+	
+}
