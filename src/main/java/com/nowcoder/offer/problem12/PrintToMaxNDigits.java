@@ -18,18 +18,18 @@ public class PrintToMaxNDigits {
 				array[n] = i;
 				printArray(array, n + 1);
 			} else {
-				boolean isFirstNo0 = false;
+				boolean flag = false;
 				for (int j = 0; j < array.length; j++) {
 					if (array[j] != 0) {
 						System.out.print(array[j]);
-						if (!isFirstNo0)
-							isFirstNo0 = true;
+						if (!flag)
+							flag = true;
 					} else {
-						if (isFirstNo0)
-							System.out.print(array[j]+"&");
+						if (flag)
+							System.out.print(array[j]);
 					}
 				}
-				System.out.print("\n");
+				System.out.println();
 				return;
 			}
 		}
