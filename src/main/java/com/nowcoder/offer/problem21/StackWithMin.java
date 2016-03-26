@@ -2,20 +2,25 @@ package com.nowcoder.offer.problem21;
 
 import java.util.Stack;
 
-public class StackWithMin<Integer> extends Stack {
+public class StackWithMin {
 	private Stack<Integer> dataStack = new Stack<>();
 	private Stack<Integer> auxStack = new Stack<>();
 	
-	@Override
-	public Object push(Object item) {
-		// TODO Auto-generated method stub
-		return super.push(item);
+	public void push(Integer item) {
+		dataStack.push(item);
+		if (auxStack.size() == 0 || item <= auxStack.peek()) {
+			auxStack.push(item);
+		} else {
+			auxStack.push(auxStack.peek());
+		}
 	}
-	@Override
-	public synchronized Object pop() {
-		// TODO Auto-generated method stub
-		return super.pop();
+
+	public Integer pop() {
+		auxStack.pop();
+		return dataStack.pop();
 	}
 	
-	
+	public Integer min() {
+		return auxStack.peek();
+	}
 }
