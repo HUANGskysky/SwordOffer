@@ -13,7 +13,7 @@ public class Test {
 		node1.data = 2;
 		node2.data = 2;
 		FindPath testFindPath = new FindPath();
-		testFindPath.findPath(root1, 5);
+		testFindPath.findPath(root1, 3);
 
 	}
 }

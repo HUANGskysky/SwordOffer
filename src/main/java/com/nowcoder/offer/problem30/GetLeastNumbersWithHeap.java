@@ -2,8 +2,16 @@ package com.nowcoder.offer.problem30;
 
 import java.util.Arrays;
 
-public class GetLeastNumbers {
-	public void getLeastNumers(int[] a, int k) {
+public class GetLeastNumbersWithHeap {
+	
+	/**
+	 * 方法1 nlgn
+	 * 方法2 nlgk 最大堆法
+	 * 方法3 O(n) patition法
+	 * @param a
+	 * @param k
+	 */
+	public void getLeastNumbers(int[] a, int k) {
 		if (null == a || k <= 0 || k > a.length) {
 			return;
 		}
@@ -19,6 +27,9 @@ public class GetLeastNumbers {
 				adjustHeap(kArr, 0);
 			}
 		}
+		for (int i = 0; i < kArr.length; i++) {
+			System.out.println(kArr[i]);
+		}
 	}
 	
 	/**
@@ -29,8 +40,8 @@ public class GetLeastNumbers {
 	private void adjustHeap(int[] a, int parent) {
 		int left = 2 * parent + 1;
 		int right = 2 * parent + 2;
-		int largest = 0;
-		if (left < a.length && a[left] > a[parent]) {
+		int largest = parent;
+		if (left < a.length && a[left] > a[largest]) {
 			largest = left;
 		}
 		if (right < a.length && a[right] > a[largest]) {
