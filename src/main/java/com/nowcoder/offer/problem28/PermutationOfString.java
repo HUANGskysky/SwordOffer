@@ -34,7 +34,7 @@ public class PermutationOfString {
 	
 	private void swap(char[] a, int begin, int i) {
 		 char temp = a[begin];
-	        a[begin] = a[i];
-	        a[i] = temp;
+	     a[begin] = a[i];
+	     a[i] = temp;
 	}
 }

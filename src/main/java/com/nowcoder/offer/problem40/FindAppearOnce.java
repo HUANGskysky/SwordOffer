@@ -23,7 +23,7 @@ public class FindAppearOnce {
 		System.out.println(number2);
 	}
 	
-	// 找出number的二进制中最右边是1的位
+	// 找出number的二进制中最右边是1的位 
 	private int findFirstBitIs1(int number) {
 		int indexBit = 0;
 		while ((number & 1) == 0) {
