@@ -4,6 +4,6 @@ public class Test {
 	public static void main(String[] args) {
 		FirstNotRepeating test = new FirstNotRepeating();
 		System.out.println(test.getFirstNotRepeatingWay1("abaccdeff"));
-		System.out.println(test.getFirstNotRepeatingWay2("abaccdeff"));
+		System.out.println(test.getFirstNotRepeatingWay2("GooGle"));
 	}
 }

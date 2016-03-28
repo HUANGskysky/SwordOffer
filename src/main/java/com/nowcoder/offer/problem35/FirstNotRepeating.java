@@ -43,27 +43,28 @@ public class FirstNotRepeating {
 	 * @return
 	 */
 	public Character getFirstNotRepeatingWay2(String s) {
-		if (null == s) {
+		if (null == s || s.length() <= 0)
 			return null;
-		}
-		int[] num = new int[255];
-		int[] index = new int[255]; 
+		if (s.length() < 2)
+			return s.charAt(0);
+		int[] num = new int[256];
+		int[] index = new int[256];
 		
 		for (int i = 0; i < s.length(); i++) {
-			num[s.charAt(i)-'a']++;
-			if (num[s.charAt(i)-'a'] == 1) {
-				index[s.charAt(i)-'a'] = i;
-			} else {
-				index[s.charAt(i)-'a'] = 0;
+			num[s.charAt(i)]++;
+			if (index[s.charAt(i)] == 0) {
+				index[s.charAt(i)] = i;
 			}
 		}
 		
-		for (int val : index) {
-			if (val != 0) {
-				return s.charAt(val);
+		int min = 300;
+		for (int i = 0; i < 256; i++) {
+			if (1 == num[i]) {
+				min = (index[i] < min ? index[i] : min);
 			}
 		}
-		
+		if (min != 100)
+			return s.charAt(min);
 		return null;
 	}
 }
