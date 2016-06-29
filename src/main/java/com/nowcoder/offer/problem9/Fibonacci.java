@@ -4,15 +4,21 @@ package com.nowcoder.offer.problem9;
  * 斐波那契数列
  */
 public class Fibonacci {
-	public int fibRecursive(int n) {
-		if (n <= 0) {
+
+	public int fibRecursively(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("the param is less than 0");
+        }
+
+		if (0 == n) {
 			return 0;
 		}
+
 		if (1 == n) {
 			return 1;
 		}
 		
-		return fibRecursive(n-1) + fibRecursive(n-2);
+		return fibRecursively(n-1) + fibRecursively(n-2);
 	}
 	
 	public int fib(int n) {

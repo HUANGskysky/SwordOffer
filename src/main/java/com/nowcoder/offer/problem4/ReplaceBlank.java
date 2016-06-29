@@ -2,22 +2,22 @@ package com.nowcoder.offer.problem4;
 
 /**
  * 替换空格
- * @author 哓哓
+ * @author hztaoran
  *
  */
 public class ReplaceBlank {
 	public String replaceBlank(String input) {
-		if (null == input) {
+		if (null == input || input.length() <= 0) {
 			return null;
 		}
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < input.length(); i++) {
 			if (input.charAt(i) == ' ') {
-				sb.append("%");
-				sb.append("2");
-				sb.append("0");
+				sb.append('%');
+				sb.append('2');
+				sb.append('0');
 			} else {
-				sb.append(String.valueOf(input.charAt(i)));
+				sb.append(input.charAt(i));
 			}
 		}
 		return sb.toString();

@@ -2,5 +2,5 @@
 .settings/
 .classpath
 .idea/
-
+.project
 *.iml

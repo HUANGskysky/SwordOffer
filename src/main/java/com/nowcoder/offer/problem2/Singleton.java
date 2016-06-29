@@ -2,7 +2,7 @@ package com.nowcoder.offer.problem2;
 
 /**
  * 静态内部类实现的线程安全的单例
- * @author 哓哓
+ * @author hztaoran
  *
  */
 public class Singleton {

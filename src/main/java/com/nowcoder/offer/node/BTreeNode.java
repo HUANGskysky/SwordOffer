@@ -2,7 +2,7 @@ package com.nowcoder.offer.node;
 
 /**
  * 二叉树定义
- * @author 哓哓
+ * @author hztaoran
  *
  */
 public class BTreeNode {

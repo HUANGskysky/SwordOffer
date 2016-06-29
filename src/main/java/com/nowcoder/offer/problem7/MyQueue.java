@@ -4,8 +4,9 @@ import java.util.Stack;
 
 /**
  * 两个栈实现队列
- * @author 哓哓
  *
+ * @author hztaoran
+ * @version 1.0
  */
 public class MyQueue {
 

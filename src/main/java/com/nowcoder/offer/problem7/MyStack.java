@@ -3,6 +3,13 @@ package com.nowcoder.offer.problem7;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * 两个队列实现一个栈
+ *
+ * @author hztaoran
+ * @version 1.0
+ *
+ */
 public class MyStack {
 	private Queue<Integer> q1 = new LinkedList<>();
 	private Queue<Integer> q2 = new LinkedList<>();

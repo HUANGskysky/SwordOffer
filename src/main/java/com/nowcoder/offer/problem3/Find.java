@@ -2,12 +2,12 @@ package com.nowcoder.offer.problem3;
 
 /**
  * 二维数组查找指定数
- * @author 哓哓
+ * @author hztaoran
  *
  */
 public class Find {
 	public boolean find(int[][] a, int number) {
-		if (null == a) {
+		if (null == a || a.length <= 0) {
 			return false;
 		}
 		int row = 0;
@@ -23,4 +23,5 @@ public class Find {
 		}
 		return false;
 	}
+
 }
