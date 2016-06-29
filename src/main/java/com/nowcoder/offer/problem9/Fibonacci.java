@@ -1,6 +1,8 @@
 package com.nowcoder.offer.problem9;
 
 /**
+ * Problem9
+ *
  * 斐波那契数列
  */
 public class Fibonacci {
@@ -17,11 +19,14 @@ public class Fibonacci {
 		if (1 == n) {
 			return 1;
 		}
-		
+
 		return fibRecursively(n-1) + fibRecursively(n-2);
 	}
 	
 	public int fib(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("the param is less than 0");
+        }
 		int res[] = {0, 1};
 		if (n < 2) {
 			return res[n];
@@ -34,7 +39,7 @@ public class Fibonacci {
 			fib2 = fib1;
 			fib1 = fibN;
 		}
-		
+
 		return fibN;
 	}
 }

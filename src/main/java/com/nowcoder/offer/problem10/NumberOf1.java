@@ -1,7 +1,9 @@
 package com.nowcoder.offer.problem10;
 
 /**
- * 
+ * Problem10
+ * 二进制中1的个数
+ *
  * @author 哓哓
  *
  */

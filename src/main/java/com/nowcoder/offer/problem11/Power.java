@@ -1,8 +1,8 @@
 package com.nowcoder.offer.problem11;
 
 /**
- * 
- * @author 哓哓
+ * 求幂
+ * @author hztaoran
  *
  */
 public class Power {
@@ -12,11 +12,11 @@ public class Power {
 		if (equal(base, 0.0) && exponent < 0) {
 			throw new Exception("0的负数次幂没意义");
 		}
-		if (equal(exponent, 0)) {
+		if (exponent == 0) {
 			return 1.0;
 		}
 		if (exponent < 0) {
-			res = powerWithExponent(1.0/base, -exponent);
+			res = powerWithExponent(1.0 / base, -exponent);
 		} else {
 			res = powerWithExponent(base, exponent);
 		}
@@ -37,8 +37,5 @@ public class Power {
 		} else {
 			return false;
 		}
-	}
-	public static void main(String[] args) {
-		System.out.println(0 == 0.000000001);
 	}
 }

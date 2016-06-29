@@ -1,6 +1,7 @@
 package com.nowcoder.offer.problem2;
 
 /**
+ * Problem2
  * 静态内部类实现的线程安全的单例
  * @author hztaoran
  *
