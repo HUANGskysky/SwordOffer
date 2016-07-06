@@ -17,7 +17,7 @@ public class Test {
 		a3.data = 3;
 		a4.data = 4;
 		FindKthToTail fkt = new FindKthToTail();
-		ListNode node = fkt.findKthToTail(a1, 4);
+		ListNode node = fkt.findKthOfTail(a1, 4);
 		System.out.println(node.data);
 	}
 }

@@ -13,7 +13,10 @@ public class Test {
 		b.data = 2;
 		c.data = 3;
 		DeleteNode dn = new DeleteNode();
-		dn.deleteNode(a, c);
-		System.out.println(a.next.next);
+		ListNode head = dn.deleteNode(a, a);
+		while (head != null) {
+			System.out.println(head.data);
+			head = head.next;
+		}
 	}
 }
