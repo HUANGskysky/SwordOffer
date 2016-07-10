@@ -2,17 +2,19 @@ package com.nowcoder.offer.problem17;
 
 import com.nowcoder.offer.node.ListNode;
 
-/*
+/**
+ * problem17
  * 输入两个递增的链表，合并这两个链表并使新链表仍然是递增的
+ *
+ * @author hztaoran
  */
 public class MergeList {
-	public ListNode merge(ListNode root1, ListNode root2) {
+	public ListNode mergeRecursively(ListNode root1, ListNode root2) {
 		if (null == root1) {
 			return root2;
 		} else if (null == root2) {
 			return root1;
 		}
-
 		ListNode newHead = null;
 
 		if (root1.data <= root2.data) {
@@ -32,7 +34,7 @@ public class MergeList {
 	 * @param list2
 	 * @return
 	 */
-	public ListNode merge2(ListNode list1, ListNode list2) {
+	public ListNode merge(ListNode list1, ListNode list2) {
 		if (list1 == null) {
 			return list2;
 		}
@@ -68,4 +70,5 @@ public class MergeList {
 
 		return newHead;
 	}
+
 }

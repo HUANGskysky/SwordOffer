@@ -33,7 +33,8 @@ public class Test {
 		a.data = 7;
 		b.data = 2;
 		Tree1AndTree2 tat = new Tree1AndTree2();
-		System.out.println(tat.hasSubTree(root1, root2));
+		System.out.println("==============");
+		System.out.println(tat.isSubTree(root1, root2));
 
 	}
 }
