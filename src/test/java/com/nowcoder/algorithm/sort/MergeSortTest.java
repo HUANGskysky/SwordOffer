@@ -1,8 +1,6 @@
-package com.tinymood.sort;
+package com.nowcoder.algorithm.sort;
 
 import org.junit.Test;
-
-import com.tinymood.sort.MergeSort;
 
 public class MergeSortTest {
 	@Test

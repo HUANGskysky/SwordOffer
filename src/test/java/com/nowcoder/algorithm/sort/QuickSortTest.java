@@ -1,10 +1,8 @@
-package com.tinymood.sort;
+package com.nowcoder.algorithm.sort;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-
-import com.tinymood.sort.QuickSort;
 
 public class QuickSortTest {
 
