@@ -2,18 +2,11 @@ package com.nowcoder.algorithm.sort;
 
 /**
  * 堆排序
- * @author 哓哓
+ * @author hztaoran
  *
+ * update: 2016-7-11 11:03:36
  */
 public class HeapSort {
-	
-	// 打印最大堆
-	public void print(int[] a) {
-		for (int i : a) {
-			System.out.println(i);
-		}
-	}
-	
 	public void heapSort(int[] a) {
 		if (null == a || a.length < 2) {
 			return;
@@ -28,7 +21,6 @@ public class HeapSort {
 			
 			adjustHeap(a, i, 0);
 		}
-		print(a);
 	}
 
 	// 建堆

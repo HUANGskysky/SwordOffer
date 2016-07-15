@@ -71,7 +71,7 @@ public class ConsistentHashWithoutVN {
 		String[] nodes = {"127.0.0.1:1111", "221.226.0.1:2222", "10.211.0.1:3333"};
 		for (int i = 0; i < nodes.length; i++) {
 			System.out.println("[" + nodes[i] + "]的hash值为" + getHash(nodes[i]) + ",被路由到的服务器为[" 
-		+ matchServer(nodes[i]) + "");
+		+ matchServer(nodes[i]) + "]");
 		}
 	}
 	

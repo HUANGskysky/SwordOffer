@@ -25,6 +25,6 @@ public class Test {
 		node5.data = 4;
 		node6.data = 7;
 		LevelTraverse lt = new LevelTraverse();
-		lt.levelOrder(root1);
+		lt.levelTraverse(root1);
 	}
 }

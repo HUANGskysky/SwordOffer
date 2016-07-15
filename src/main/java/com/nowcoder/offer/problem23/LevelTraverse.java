@@ -5,22 +5,26 @@ import java.util.Queue;
 
 import com.nowcoder.offer.node.BTreeNode;
 
+/**
+ * 二叉树的层序遍历
+ */
 public class LevelTraverse {
-	public void levelOrder(BTreeNode root) {
-		if (root == null) {
-			return;
-		}
-		Queue<BTreeNode> queue = new LinkedList<>();
-		queue.offer(root);
-		while (!queue.isEmpty()) {
-			BTreeNode node = queue.poll();
-			System.out.println(node.data);
-			if (node.leftChild != null) {
-				queue.offer(node.leftChild);
-			}
-			if (node.rightChild != null) {
-				queue.offer(node.rightChild);
-			}
-		}
-	}
+    public void levelTraverse(BTreeNode root) {
+        if (null == root) {
+            return;
+        }
+
+        Queue<BTreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            BTreeNode node = queue.poll();
+            System.out.println(node.data);
+            if (null != node.leftChild) {
+                queue.offer(node.leftChild);
+            }
+            if (null != node.rightChild) {
+                queue.offer(node.rightChild);
+            }
+        }
+    }
 }

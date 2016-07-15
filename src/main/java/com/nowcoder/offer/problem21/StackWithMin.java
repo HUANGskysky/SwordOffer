@@ -4,23 +4,23 @@ import java.util.Stack;
 
 public class StackWithMin {
 	private Stack<Integer> dataStack = new Stack<>();
-	private Stack<Integer> auxStack = new Stack<>();
+	private Stack<Integer> minStack = new Stack<>();
 	
 	public void push(Integer item) {
 		dataStack.push(item);
-		if (auxStack.size() == 0 || item <= auxStack.peek()) {
-			auxStack.push(item);
+		if (minStack.size() == 0 || item <= minStack.peek()) {
+			minStack.push(item);
 		} else {
-			auxStack.push(auxStack.peek());
+			minStack.push(minStack.peek());
 		}
 	}
 
 	public Integer pop() {
-		auxStack.pop();
+		minStack.pop();
 		return dataStack.pop();
 	}
 	
 	public Integer min() {
-		return auxStack.peek();
+		return minStack.peek();
 	}
 }

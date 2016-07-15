@@ -2,6 +2,8 @@ package com.nowcoder.offer.problem25;
 
 import com.nowcoder.offer.node.BTreeNode;
 
+import java.util.ArrayList;
+
 public class Test {
 	public static void main(String[] args) {
 		BTreeNode root1 = new BTreeNode();
@@ -12,8 +14,11 @@ public class Test {
 		root1.data = 1;
 		node1.data = 2;
 		node2.data = 2;
-		FindPath testFindPath = new FindPath();
-		testFindPath.findPath(root1, 3);
 
+		FindPath testFindPath = new FindPath();
+		ArrayList<ArrayList<Integer>> list = testFindPath.findPath(root1, 1);
+		for (ArrayList<Integer> path : list) {
+			System.out.println(path);
+		}
 	}
 }
