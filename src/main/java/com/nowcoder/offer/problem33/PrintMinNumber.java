@@ -3,6 +3,11 @@ package com.nowcoder.offer.problem33;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * Problem33 把数组排成最小的数
+ *
+ * @author hztaoran
+ */
 public class PrintMinNumber {
 	public String print(int[] array) {
 

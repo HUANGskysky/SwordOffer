@@ -15,6 +15,7 @@ public class ComplexListClone {
         return split(head);
     }
 
+    // 第一步 复制节点
     private void copyNode(ComplexListNode head) {
         if (null == head) {
             return;
@@ -30,6 +31,7 @@ public class ComplexListClone {
         }
     }
 
+    // 第二步 处理sibling
     private void processSibling(ComplexListNode head) {
         if (null == head) {
             return;
@@ -44,6 +46,7 @@ public class ComplexListClone {
         }
     }
 
+    // 第三步 拆分
     private ComplexListNode split(ComplexListNode head) {
         ComplexListNode p = head;
         ComplexListNode cloneHead = null;

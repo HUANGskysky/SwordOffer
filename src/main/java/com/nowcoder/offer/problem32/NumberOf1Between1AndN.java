@@ -1,5 +1,11 @@
 package com.nowcoder.offer.problem32;
 
+/**
+ * Problem 32
+ * 1-N中数字出现1的次数
+ *
+ * @author hztaoran
+ */
 public class NumberOf1Between1AndN {
 	/**
 	 * O(nlgn)
@@ -24,7 +30,8 @@ public class NumberOf1Between1AndN {
 		
 		return count;
 	}
-	
+
+	// leetcode解法
 	public int countDigitOne(int n) {
 		int count = 0;
 		for (int i = 1; i <= n; i *= 10) {

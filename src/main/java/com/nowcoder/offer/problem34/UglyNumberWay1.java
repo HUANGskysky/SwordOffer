@@ -1,16 +1,22 @@
 package com.nowcoder.offer.problem34;
 
+/**
+ * Problem34
+ * 丑数:只包含因子2,3,5的数称为丑数
+ *
+ * @author hztaoran
+ */
 public class UglyNumberWay1 {
 	public int getUglyNumber(int index) {
 		if (index <= 0) {
 			return 0;
 		}
 		int number = 0;
-		int uglyIndex = 0;
-		while (uglyIndex < index) {
+		int count = 0;
+		while (count < index) {
 			number++;
 			if (isUgly(number)) {
-				uglyIndex++;
+				count++;
 			}
 		}
 		return number;

@@ -2,15 +2,15 @@ package com.nowcoder.offer.problem30;
 
 import java.util.Arrays;
 
+/**
+ * Problem30
+ * 最小的k个数
+ * 最大堆法O(nlgk)
+ *
+ * @author hztaoran
+ */
 public class GetLeastNumbersWithHeap {
-	
-	/**
-	 * 方法1 nlgn
-	 * 方法2 nlgk 最大堆法
-	 * 方法3 O(n) patition法
-	 * @param a
-	 * @param k
-	 */
+
 	public void getLeastNumbers(int[] a, int k) {
 		if (null == a || k <= 0 || k > a.length) {
 			return;
@@ -31,12 +31,7 @@ public class GetLeastNumbersWithHeap {
 			System.out.println(kArr[i]);
 		}
 	}
-	
-	/**
-	 * 递归调整堆
-	 * @param a
-	 * @param parent
-	 */
+
 	private void adjustHeap(int[] a, int parent) {
 		int left = 2 * parent + 1;
 		int right = 2 * parent + 2;

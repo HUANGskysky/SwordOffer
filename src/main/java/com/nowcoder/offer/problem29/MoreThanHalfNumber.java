@@ -1,9 +1,17 @@
 package com.nowcoder.offer.problem29;
 
+/**
+ * Problem 29
+ * 找数组中出现超过一半的数字
+ *
+ * @author hztaoran
+ */
 public class MoreThanHalfNumber {
-	public Integer findNum(int[] a) {
-		if (null == a) {
-			return null;
+	public int findNum(int[] a) {
+		int noAnswer = 0x7fffffff;
+
+		if (null == a || a.length <= 0) {
+			return noAnswer;
 		}
 		
 		int res = a[0];
@@ -22,7 +30,7 @@ public class MoreThanHalfNumber {
 		if (checkMoreThanHalf(a, res)) {
 			return res;
 		} else {
-			return null;
+			return noAnswer;
 		}
 	}
 	
@@ -33,7 +41,7 @@ public class MoreThanHalfNumber {
 				times++;
 			}
 		}
-		if (2*times <= a.length) {
+		if (2 * times <= a.length) {
 			return false;
 		} else {
 			return true;
