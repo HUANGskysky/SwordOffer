@@ -11,6 +11,7 @@ public class UglyNumberWay2 {
 		if (n <= 0) {
 			return 0;
 		}
+
 		int[] uglyArr = new int[n];
 		uglyArr[0] = 1;
 		int m2 = 0, m3 = 0, m5 = 0;
@@ -30,6 +31,7 @@ public class UglyNumberWay2 {
 				m5++;
 			}
 		}
+
         return uglyArr[n - 1];
 	}
 

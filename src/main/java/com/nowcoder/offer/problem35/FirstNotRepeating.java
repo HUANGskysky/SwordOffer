@@ -1,5 +1,6 @@
 package com.nowcoder.offer.problem35;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -15,9 +16,10 @@ public class FirstNotRepeating {
 	 * @return
 	 */
 	public Character getFirstNotRepeatingWay1(String s) {
-		if (null == s) {
+		if (null == s || s.length() <= 0) {
 			return null;
 		}
+
 		Map<Character, Integer> map = new LinkedHashMap<>();
 		
 		for (int i = 0; i < s.length(); i++) {
@@ -43,28 +45,34 @@ public class FirstNotRepeating {
 	 * @return
 	 */
 	public Character getFirstNotRepeatingWay2(String s) {
-		if (null == s || s.length() <= 0)
-			return null;
+		if (null == s || s.length() <= 0) {
+            return null;
+        }
+
 		if (s.length() < 2)
 			return s.charAt(0);
+
 		int[] num = new int[256];
 		int[] index = new int[256];
-		
-		for (int i = 0; i < s.length(); i++) {
+        Arrays.fill(index, -1);
+
+        for (int i = 0; i < s.length(); i++) {
 			num[s.charAt(i)]++;
-			if (index[s.charAt(i)] == 0) {
+			if (index[s.charAt(i)] == -1) {
 				index[s.charAt(i)] = i;
 			}
 		}
 		
-		int min = 300;
+		int minIndex = Integer.MAX_VALUE;
 		for (int i = 0; i < 256; i++) {
 			if (1 == num[i]) {
-				min = (index[i] < min ? index[i] : min);
+                minIndex = (index[i] < minIndex ? index[i] : minIndex);
 			}
 		}
-		if (min != 100)
-			return s.charAt(min);
+
+		if (minIndex != Integer.MAX_VALUE)
+			return s.charAt(minIndex);
+
 		return null;
 	}
 }
