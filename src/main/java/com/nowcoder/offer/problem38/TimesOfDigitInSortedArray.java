@@ -2,7 +2,19 @@ package com.nowcoder.offer.problem38;
 
 import java.util.Arrays;
 
-public class GetNumberOfSortedArray {
+/**
+ * 排序数组中指定数字出现的次数
+ * way1 二分找到第一个然后左右扫描 O(n)
+ * way 更快的二分O(lgn)
+ *
+ */
+public class TimesOfDigitInSortedArray {
+
+	/**
+	 * @param a 排序数组
+	 * @param k 待查找的数字
+     * @return 数字次数
+     */
 	public int getNumberOfK(int[] a, int k) {
 		int res = 0;
 		if (null == a || a.length <= 0) {

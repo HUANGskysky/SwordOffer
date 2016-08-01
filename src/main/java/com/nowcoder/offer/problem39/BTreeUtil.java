@@ -30,7 +30,7 @@ public class BTreeUtil {
         int left = getDepth(root.leftChild);
         int right = getDepth(root.rightChild);
         int diff = left - right;
-        if (diff >1 || diff < -1) {
+        if (diff > 1 || diff < -1) {
             return false;
         }
 

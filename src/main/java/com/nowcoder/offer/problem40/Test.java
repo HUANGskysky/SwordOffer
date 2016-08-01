@@ -1,9 +1,11 @@
 package com.nowcoder.offer.problem40;
 
+import java.util.Arrays;
+
 public class Test {
 	public static void main(String args[]) {
-		FindAppearOnce test = new FindAppearOnce();
+		AppearOnce test = new AppearOnce();
 		int[] array = { 4, 6, 1, 1, 1, 1 };
-		test.find(array);
+		System.out.println(Arrays.toString(test.find(array)));
 	}
 }

@@ -35,7 +35,7 @@ public class UglyNumberWay2 {
         return uglyArr[n - 1];
 	}
 
-	int Min(int number1, int number2, int number3) {
+	private int Min(int number1, int number2, int number3) {
 		int min = (number1 < number2) ? number1 : number2;
 		return min < number3 ? min : number3;
 	}

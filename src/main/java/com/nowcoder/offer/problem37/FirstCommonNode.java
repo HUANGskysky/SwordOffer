@@ -3,16 +3,21 @@ package com.nowcoder.offer.problem37;
 import com.nowcoder.offer.node.ListNode;
 
 /**
- * Created by taoxiaoran on 16/3/29.
+ * Problem37
+ * way1 蛮力时间O(m*n)
+ * way2 利用栈时间O(m+n) 空间O(m+n)
+ * way3 时间O(m+n)
+ *
+ * @author hztaoran
  */
-public class FindFirstCommonNode {
+public class FirstCommonNode {
     public ListNode find(ListNode root1, ListNode root2) {
         int len1 = getLength(root1);
         int len2 = getLength(root2);
         ListNode p = null;
         ListNode q = null;
         int dif = 0;
-        if (len1 < len2) {
+        if (len1 > len2) {
             p = root1;
             q = root2;
             dif = len1 - len2;
