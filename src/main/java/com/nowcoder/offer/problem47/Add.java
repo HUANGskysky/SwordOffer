@@ -1,7 +1,9 @@
 package com.nowcoder.offer.problem47;
 
 /**
- * Created by taoxiaoran on 16/3/29.
+ * Problem47
+ *
+ * 不使用加减乘除做加法
  */
 public class Add {
     public int add (int num1, int num2) {
