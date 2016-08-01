@@ -16,7 +16,7 @@ public class Test {
 		node2.data = 2;
 
 		FindPath testFindPath = new FindPath();
-		ArrayList<ArrayList<Integer>> list = testFindPath.findPath(root1, 1);
+		ArrayList<ArrayList<Integer>> list = testFindPath.findPath(root1, 3);
 		for (ArrayList<Integer> path : list) {
 			System.out.println(path);
 		}
