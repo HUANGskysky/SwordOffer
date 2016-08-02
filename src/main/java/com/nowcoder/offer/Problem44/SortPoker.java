@@ -3,7 +3,11 @@ package com.nowcoder.offer.Problem44;
 import java.util.Arrays;
 
 /**
- * Created by hztaoran on 2016/8/1.
+ * Problem44
+ * 扑克牌的顺子
+ * 0可以充当任意数
+ *
+ * @author hztaoran
  */
 public class SortPoker {
     public boolean isContinuous(int[] a) {
