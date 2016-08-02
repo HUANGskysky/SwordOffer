@@ -1,7 +1,7 @@
 package com.nowcoder.offer.Problem46;
 
 /**
- * Created by hztaoran on 2016/8/1.
+ * Created by hztaoran on 2015/8/1.
  */
 public class Test {
     public static void main(String args[]) throws Exception {
