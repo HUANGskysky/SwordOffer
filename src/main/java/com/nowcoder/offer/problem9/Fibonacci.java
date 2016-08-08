@@ -27,17 +27,20 @@ public class Fibonacci {
         if (n < 0) {
             throw new IllegalArgumentException("the param is less than 0");
         }
+
 		int res[] = {0, 1};
 		if (n < 2) {
 			return res[n];
 		}
-		int fib1 = 1;
-		int fib2 = 0;
+
+		int fib1 = 0;
+		int fib2 = 1;
 		int fibN = 0;
+
 		for (int i = 2; i <= n; i++) {
 			fibN = fib1 + fib2;
-			fib2 = fib1;
-			fib1 = fibN;
+			fib1 = fib2;
+			fib2 = fibN;
 		}
 
 		return fibN;

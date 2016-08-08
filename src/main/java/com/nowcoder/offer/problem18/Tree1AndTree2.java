@@ -14,35 +14,31 @@ public class Tree1AndTree2 {
      * @param root2 目标树
      * @return
      */
-    public boolean isSubTree(BTreeNode root1, BTreeNode root2) {
-        if (null == root2) {
-            return true;
-        } else if (null == root1) {
-            return false;
-        }
+    public boolean HasSubtree(BTreeNode root1, BTreeNode root2) {
         boolean flag = false;
-        if (root1 != null && root2 != null) {
+
+        if (null != root1 && null != root2) {
             if (root1.data == root2.data) {
-               flag = doesTree1HasTree2(root1, root2);
+                flag = isSubTree(root1, root2);
             }
             if (!flag) {
-                return doesTree1HasTree2(root1.leftChild, root2) || doesTree1HasTree2(root1.rightChild, root2);
+                return HasSubtree(root1.leftChild, root2) || HasSubtree(root1.rightChild, root2);
             }
         }
-
         return flag;
     }
 
-    private boolean doesTree1HasTree2(BTreeNode root1, BTreeNode root2) {
+    private boolean isSubTree(BTreeNode root1, BTreeNode root2) {
         if (null == root2) {
             return true;
-        } else if (null == root1) {
+        }
+        if (null == root1) {
             return false;
         }
         if (root1.data != root2.data) {
             return false;
         } else {
-            return doesTree1HasTree2(root1.leftChild, root2.leftChild) && doesTree1HasTree2(root1.rightChild, root2.rightChild);
+            return isSubTree(root1.leftChild, root2.leftChild) && isSubTree(root1.rightChild, root2.rightChild);
         }
     }
 }

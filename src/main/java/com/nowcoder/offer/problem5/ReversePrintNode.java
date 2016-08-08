@@ -35,7 +35,7 @@ public class ReversePrintNode {
     public List<ListNode> print2(ListNode head) {
         List<ListNode> list = new ArrayList<>();
         if (null == head) {
-            return null;
+            return list;
         }
         printRecursively(head, list);
 

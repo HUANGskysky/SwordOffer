@@ -41,6 +41,7 @@ public class MergeList {
 		if (list2 == null) {
 			return list1;
 		}
+
 		ListNode newHead = null;
 		if (list1.data <= list2.data) {
 			newHead = list1;

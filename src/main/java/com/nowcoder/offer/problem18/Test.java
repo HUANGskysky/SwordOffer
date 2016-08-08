@@ -34,7 +34,7 @@ public class Test {
 		b.data = 2;
 		Tree1AndTree2 tat = new Tree1AndTree2();
 		System.out.println("==============");
-		System.out.println(tat.isSubTree(root1, root2));
+		System.out.println(tat.HasSubtree(root1, root2));
 
 	}
 }

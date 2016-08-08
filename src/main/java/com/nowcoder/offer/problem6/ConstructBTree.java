@@ -16,13 +16,16 @@ public class ConstructBTree {
 	 *	e.g.12473568,47215386
 	 */
     public BTreeNode construct(int[] preorder, int[] inorder) throws Exception {
-        boolean flag = false;
+
         if (null == preorder || null == inorder || preorder.length <= 0 || inorder.length <= 0) {
             return null;
         }
+
         if (preorder.length != inorder.length) {
             throw new Exception("length is not equal, error input");
         }
+
+        boolean flag = false;
         BTreeNode root = new BTreeNode();
         for (int i = 0; i < preorder.length; i++) {
             if (inorder[i] == preorder[0]) {
@@ -34,6 +37,7 @@ public class ConstructBTree {
                         , Arrays.copyOfRange(inorder, i + 1, inorder.length));
             }
         }
+
         if (!flag) {
             throw new Exception("no root node, error input");
         }
