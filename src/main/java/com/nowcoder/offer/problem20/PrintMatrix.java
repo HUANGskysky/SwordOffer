@@ -36,7 +36,7 @@ public class PrintMatrix {
             System.out.println(a[row][i]);
         }
 
-        // 从下往上打印一行
+        // 从下往上打印一列
         for (int i = row - 1; i >= start + 1; i--) {
             System.out.println(a[i][start]);
         }
