@@ -1,5 +1,7 @@
 package com.nowcoder.niuke.swordoffer;
 
+import org.apache.commons.codec.binary.Base64;
+
 import java.util.Stack;
 
 /**

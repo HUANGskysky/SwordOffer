@@ -10,25 +10,26 @@ import com.nowcoder.offer.node.BTreeNode;
  */
 public class Convert {
 
+    private BTreeNode lastNode = null;
+
     public BTreeNode convert(BTreeNode root) {
         if (null == root) {
             return null;
         }
-        BTreeNode lastNode = null;
-        convertNode(root, lastNode);
+        convertNode(root);
         while (null != lastNode && lastNode.leftChild != null) {
             lastNode = lastNode.leftChild;
         }
         return lastNode;
     }
 
-    private void convertNode(BTreeNode root, BTreeNode lastNode) {
+    private void convertNode(BTreeNode root) {
         if (null == root) {
             return;
         }
         BTreeNode current = root;
         if (null != current.leftChild) {
-            convertNode(current.leftChild, lastNode);
+            convertNode(current.leftChild);
         }
         current.leftChild = lastNode;
         if (null != lastNode) {
@@ -36,7 +37,7 @@ public class Convert {
         }
         lastNode = current;
         if (null != current.rightChild) {
-            convertNode(current.rightChild, lastNode);
+            convertNode(current.rightChild);
         }
     }
 }

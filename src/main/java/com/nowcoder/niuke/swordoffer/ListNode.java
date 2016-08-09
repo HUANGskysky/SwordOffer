@@ -6,7 +6,6 @@ package com.nowcoder.niuke.swordoffer;
 public class ListNode {
 
     int val;
-
     ListNode next = null;
 
     public ListNode(int val) {

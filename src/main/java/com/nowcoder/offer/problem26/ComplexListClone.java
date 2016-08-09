@@ -17,9 +17,6 @@ public class ComplexListClone {
 
     // 第一步 复制节点
     private void copyNode(ComplexListNode head) {
-        if (null == head) {
-            return;
-        }
         ComplexListNode p = head;
         while (null != p) {
             ComplexListNode clonedNode = new ComplexListNode();
@@ -33,9 +30,6 @@ public class ComplexListClone {
 
     // 第二步 处理sibling
     private void processSibling(ComplexListNode head) {
-        if (null == head) {
-            return;
-        }
         ComplexListNode p = head;
         while (null != p) {
             ComplexListNode clonedNode = p.next;
