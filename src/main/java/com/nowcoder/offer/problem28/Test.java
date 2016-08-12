@@ -1,8 +1,11 @@
 package com.nowcoder.offer.problem28;
 
+import java.util.ArrayList;
+
 public class Test {
     public static void main(String args[]) {
         PermutationOfString testPermutation = new PermutationOfString();
-        testPermutation.perm("abc");
+        ArrayList<String> list = testPermutation.Permutation("abc");
+        System.out.println(list);
     }
 }

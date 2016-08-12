@@ -10,6 +10,7 @@ import com.nowcoder.offer.node.BTreeNode;
  */
 public class Convert {
 
+    // 不能作为引用传递
     private BTreeNode lastNode = null;
 
     public BTreeNode convert(BTreeNode root) {

@@ -1,15 +1,12 @@
-package com.nowcoder.offer.problem28;
+package com.nowcoder.niuke.swordoffer;
 
 import java.util.ArrayList;
 import java.util.TreeSet;
 
 /**
- * Problemn28
- * 字符串的全排列
- *
- * @author hztaoran
+ * Created by hztaoran on 2016/8/12.
  */
-public class PermutationOfString {
+public class StringPermutation {
     public ArrayList<String> Permutation(String str) {
         ArrayList<String> list = new ArrayList<>();
         if (null == str || str.length() <= 0) {
@@ -21,7 +18,6 @@ public class PermutationOfString {
 
         TreeSet<String> set = new TreeSet<>();
         permCore(set, str.toCharArray(), low, high);
-
         list.addAll(set);
 
         return list;
@@ -44,4 +40,5 @@ public class PermutationOfString {
         a[i] = a[j];
         a[j] = temp;
     }
+
 }
