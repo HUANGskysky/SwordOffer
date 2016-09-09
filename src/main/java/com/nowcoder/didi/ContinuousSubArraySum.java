@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by 哓哓 on 2016/9/6 0006.
  */
-public class Main {
+public class ContinuousSubArraySum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

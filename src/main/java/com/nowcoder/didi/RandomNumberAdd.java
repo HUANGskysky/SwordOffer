@@ -8,7 +8,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * Created by _NoThankYou on 2016/9/8.
  */
-public class Main3 {
+public class RandomNumberAdd {
     public static void main(String[] args) throws InterruptedException {
         final CountDownLatch latch = new CountDownLatch(50);
 
