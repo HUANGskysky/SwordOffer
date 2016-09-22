@@ -1,10 +1,13 @@
 package com.nowcoder.didi;
 
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 public class Main1 {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        Scanner sc = new Scanner(System.in, "UTF-8");
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
             String[] str = line.split(" ");
