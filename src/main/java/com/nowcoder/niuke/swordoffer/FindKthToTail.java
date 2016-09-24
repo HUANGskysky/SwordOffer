@@ -3,6 +3,7 @@ package com.nowcoder.niuke.swordoffer;
 /**
  * Created by hztaoran on 2016/8/8.
  */
+
 public class FindKthToTail {
     public ListNode FindKthToTail(ListNode head,int k) {
         if (null == head || k <= 0) {
