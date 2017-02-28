@@ -1,4 +1,4 @@
-package com.nowcoder.offer.Problem41;
+package com.ryan.offer.Problem41;
 
 import org.junit.After;
 import org.junit.Before;
