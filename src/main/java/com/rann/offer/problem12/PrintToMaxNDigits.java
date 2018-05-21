@@ -37,4 +37,8 @@ public class PrintToMaxNDigits {
             print1ToMaxOfNDigitsRecursively(number, length, index + 1);
         }
     }
+
+    public static void main(String[] args) {
+        new PrintToMaxNDigits().print1ToMaxOfNDigits(3);
+    }
 }

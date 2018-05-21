@@ -6,8 +6,4 @@ package com.scala.offer.Node
  */
 class ListNode(var data: Int) {
   var next: ListNode = _
-
-  def this() = {
-    this(0)
-  }
 }

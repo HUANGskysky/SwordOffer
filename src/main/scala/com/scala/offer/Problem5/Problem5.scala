@@ -45,17 +45,4 @@ object Problem5 {
     }
     list.add(head)
   }
-
-  def main(args: Array[String]): Unit = {
-    val list1 = new ListNode(1)
-    val a = new ListNode(2)
-    val b = new ListNode(3)
-    val c = new ListNode(4)
-    list1.next = a
-    a.next = b
-    b.next = c
-    c.next = null
-    val list = recursivePrintNode(list1)
-    list.asScala.foreach(x => println(x.data))
-  }
 }

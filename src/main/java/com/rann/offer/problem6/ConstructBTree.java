@@ -12,9 +12,9 @@ import com.rann.offer.node.BTreeNode;
  */
 public class ConstructBTree {
     /**
-	 *	输入二叉树的前序遍历和中序遍历结果,重建二叉树并输出头节点
-	 *	e.g.12473568,47215386
-	 */
+     * 输入二叉树的前序遍历和中序遍历结果,重建二叉树并输出头节点
+     * e.g.12473568,47215386
+     */
     public BTreeNode construct(int[] preorder, int[] inorder) throws Exception {
 
         if (null == preorder || null == inorder || preorder.length <= 0 || inorder.length <= 0) {

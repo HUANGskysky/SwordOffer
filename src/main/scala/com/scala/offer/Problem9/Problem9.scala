@@ -41,9 +41,4 @@ object Problem9 {
     }
     fibN
   }
-
-  def main(args: Array[String]): Unit = {
-    println(recursiveFibonacci(3))
-    println(fibonacci(3))
-  }
 }

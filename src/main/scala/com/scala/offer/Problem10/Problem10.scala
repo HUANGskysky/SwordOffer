@@ -3,6 +3,7 @@ package com.scala.offer.Problem10
 /**
  * Created by Lemonjing on 2018/5/1.
  * Github: Lemonjing
+ * 二进制中1的个数
  */
 object Problem10 {
 
@@ -14,10 +15,5 @@ object Problem10 {
       count += 1
     }
     count
-  }
-
-  def main(args: Array[String]): Unit = {
-    println(numberOf1(3))
-    println(numberOf1(4))
   }
 }
