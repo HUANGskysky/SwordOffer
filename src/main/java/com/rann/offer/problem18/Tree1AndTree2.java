@@ -18,9 +18,7 @@ public class Tree1AndTree2 {
         boolean flag = false;
 
         if (null != root1 && null != root2) {
-            if (root1.data == root2.data) {
-                flag = isSubTree(root1, root2);
-            }
+            flag = isSubTree(root1, root2);
             if (!flag) {
                 return HasSubtree(root1.leftChild, root2) || HasSubtree(root1.rightChild, root2);
             }

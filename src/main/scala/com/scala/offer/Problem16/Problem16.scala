@@ -5,6 +5,7 @@ import com.scala.offer.Node.ListNode
 /**
  * Created by Lemonjing on 2018/5/1.
  * Github: Lemonjing
+ * 反转链表
  */
 object Problem16 {
 
@@ -21,21 +22,5 @@ object Problem16 {
       cur = next
     }
     pre
-  }
-
-  def main(args: Array[String]): Unit = {
-    val list1 = new ListNode(1)
-    val a = new ListNode(2)
-    val b = new ListNode(3)
-    val c = new ListNode(4)
-    list1.next = a
-    a.next = b
-    b.next = c
-    c.next = null
-    var head = reverseList(list1)
-    while (head != null) {
-      println(head.data)
-      head = head.next
-    }
   }
 }

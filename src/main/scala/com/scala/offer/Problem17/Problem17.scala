@@ -38,30 +38,4 @@ object Problem17 {
     }
     newHead.next
   }
-
-  def main(args: Array[String]): Unit = {
-    val list1 = new ListNode(1)
-    val a = new ListNode(3)
-    val b = new ListNode(5)
-    val c = new ListNode(7)
-    list1.next = a
-    a.next = b
-    b.next = c
-    c.next = null
-
-    val list2 = new ListNode(2)
-    val d = new ListNode(4)
-    val e = new ListNode(6)
-    val f = new ListNode(8)
-    list2.next = d
-    d.next = e
-    e.next = f
-    f.next = null
-
-    var res = mergeList(list1, list2)
-    while (res != null) {
-      println(res.data)
-      res = res.next
-    }
-  }
 }

@@ -1,5 +1,11 @@
 package com.rann.offer.problem20;
 
+/**
+ * Problem20
+ * 顺时针打印矩阵
+ *
+ * @author lemonjing
+ */
 public class PrintMatrix {
 	public void printMatrixByClockWise(int[][] a) {
         if (null == a || a.length <= 0) {
