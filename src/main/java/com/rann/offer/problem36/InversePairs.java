@@ -1,9 +1,11 @@
 package com.rann.offer.problem36;
 
+import java.util.Arrays;
+
 /**
  * Problem36
  * 数组中的逆序对
- *
+ * <p>
  * way1 一一比较O(n^2)
  * way2 -- 归并排序O(nlgn)
  *
@@ -15,7 +17,6 @@ public class InversePairs {
             return 0;
         }
         int[] copy = data.clone();
-
         return core(data, copy, 0, data.length - 1);
     }
 
@@ -37,7 +38,7 @@ public class InversePairs {
         while (i >= start && j >= start + len + 1) {
             if (data[i] > data[j]) {
                 copy[k--] = data[i--];
-                count += j - start -len;
+                count += j - start - len;
             } else {
                 copy[k--] = data[j--];
             }
@@ -52,5 +53,10 @@ public class InversePairs {
         }
 
         return left + right + count;
+    }
+
+    public static void main(String[] args) {
+        int[] a = {7, 5, 6, 4};
+        System.out.println(new InversePairs().getInversePairs(a));
     }
 }

@@ -1,7 +1,7 @@
 package com.rann.offer.problem28;
 
 import java.util.ArrayList;
-import java.util.TreeSet;
+import java.util.List;
 
 /**
  * Problemn28
@@ -10,30 +10,26 @@ import java.util.TreeSet;
  * @author lemonjing
  */
 public class PermutationOfString {
-    public ArrayList<String> Permutation(String str) {
-        ArrayList<String> list = new ArrayList<>();
+    public List<String> Permutation(String str) {
         if (null == str || str.length() <= 0) {
-            return list;
+            return null;
         }
 
+        List<String> list = new ArrayList<>();
         int low = 0;
         int high = str.length() - 1;
-
-        TreeSet<String> set = new TreeSet<>();
-        permCore(set, str.toCharArray(), low, high);
-
-        list.addAll(set);
+        permCore(str.toCharArray(), low, high, list);
 
         return list;
     }
 
-    private void permCore(TreeSet<String> set, char[] a, int low, int high) {
+    private void permCore(char[] a, int low, int high, List<String> list) {
         if (low == high) {
-            set.add(String.valueOf(a));
+            list.add(String.valueOf(a));
         } else {
             for (int i = low; i <= high; i++) {
                 swap(a, i, low);
-                permCore(set, a, low + 1, high);
+                permCore(a, low + 1, high, list);
                 swap(a, i, low);
             }
         }

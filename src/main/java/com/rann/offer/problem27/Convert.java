@@ -6,7 +6,7 @@ import com.rann.offer.node.BTreeNode;
  * 将二叉搜索树转换为一个排序的双向链表
  * Problem 27
  *
- * @author 哓哓
+ * @author lemonjing
  */
 public class Convert {
 
@@ -24,11 +24,10 @@ public class Convert {
         return lastNode;
     }
 
-    private void convertNode(BTreeNode root) {
-        if (null == root) {
+    private void convertNode(BTreeNode current) {
+        if (null == current) {
             return;
         }
-        BTreeNode current = root;
         if (null != current.leftChild) {
             convertNode(current.leftChild);
         }

@@ -7,8 +7,8 @@ import com.rann.offer.node.BTreeNode;
  */
 public class BTreeUtil {
     /*
-	 * 1.输入根节点求树的深度
-	 */
+     * 1.输入根节点求树的深度
+     */
     public int getDepth(BTreeNode root) {
         if (null == root) {
             return 0;
@@ -20,8 +20,8 @@ public class BTreeUtil {
     }
 
     /*
-	 * 2.判断二叉树是不是平衡二叉树，如果二叉树任意节点的左右子树深度相差不超过1，就是平衡的
-	 */
+     * 2.判断二叉树是不是平衡二叉树，如果二叉树任意节点的左右子树深度相差不超过1，就是平衡的
+     */
     public boolean isBalanced(BTreeNode root) {
         if (null == root) {
             return true;

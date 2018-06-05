@@ -13,7 +13,6 @@ public class LevelTraverse {
         if (null == root) {
             return;
         }
-
         Queue<BTreeNode> queue = new LinkedList<>();
         queue.offer(root);
         while (!queue.isEmpty()) {

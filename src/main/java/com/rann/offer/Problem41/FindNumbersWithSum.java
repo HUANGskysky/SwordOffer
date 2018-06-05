@@ -1,7 +1,7 @@
 package com.rann.offer.Problem41;
 
 /**
- * Problem41 查找排序数组中等于指定数字的两个数
+ * Problem41 查找排序数组中等于指定数字的两个数TwoSum
  * way1 固定1个数字 O(n^2)
  * way2 双指针两端向中间扫描O(n)
  */

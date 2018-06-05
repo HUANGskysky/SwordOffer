@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Problem41扩展 和为s的连续正数序列]
+ * Problem41扩展 和为s的连续正数序列
  *
  * @author lemonjing
  */

@@ -8,7 +8,7 @@ package com.rann.offer.problem26;
  */
 public class ComplexListClone {
 
-    public ComplexListNode cloneList(ComplexListNode head) {
+    public ComplexNode cloneList(ComplexNode head) {
         copyNode(head);
         processSibling(head);
 
@@ -16,10 +16,10 @@ public class ComplexListClone {
     }
 
     // 第一步 复制节点
-    private void copyNode(ComplexListNode head) {
-        ComplexListNode p = head;
+    private void copyNode(ComplexNode head) {
+        ComplexNode p = head;
         while (null != p) {
-            ComplexListNode clonedNode = new ComplexListNode();
+            ComplexNode clonedNode = new ComplexNode(-1);
             clonedNode.data = p.data;
             clonedNode.next = p.next;
             clonedNode.sibling = null;
@@ -29,10 +29,10 @@ public class ComplexListClone {
     }
 
     // 第二步 处理sibling
-    private void processSibling(ComplexListNode head) {
-        ComplexListNode p = head;
+    private void processSibling(ComplexNode head) {
+        ComplexNode p = head;
         while (null != p) {
-            ComplexListNode clonedNode = p.next;
+            ComplexNode clonedNode = p.next;
             if (null != p.sibling) {
                 clonedNode.sibling = p.sibling.next;
             }
@@ -41,20 +41,21 @@ public class ComplexListClone {
     }
 
     // 第三步 拆分
-    private ComplexListNode split(ComplexListNode head) {
-        ComplexListNode p = head;
-        ComplexListNode cloneHead = null;
-        ComplexListNode pClone = null;
+    private ComplexNode split(ComplexNode head) {
+        ComplexNode p = head;
+        ComplexNode cloneHead = null;
+        ComplexNode q = null;
         if (null != p) {
-            pClone = cloneHead = p.next;
-            p.next = pClone.next;
-            p = p.next;
+            cloneHead = p.next;
+            q = cloneHead;
         }
         while (null != p) {
-            pClone.next = p.next;
-            pClone = pClone.next;
-            p.next = pClone.next;
+            p.next = q.next;
             p = p.next;
+            if (p != null) {
+                q.next = p.next;
+                q = q.next;
+            }
         }
 
         return cloneHead;

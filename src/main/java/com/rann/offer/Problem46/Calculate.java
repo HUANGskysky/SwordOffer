@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class Calculate {
 
-    public int terminal(int n) {
+    private int terminal(int n) {
         return 0;
     }
 
@@ -21,7 +21,7 @@ public class Calculate {
         List<Boolean> list = new ArrayList<>();
         list.add(false);
         list.add(true);
-        Method[] methods = this.getClass().getMethods();
+        Method[] methods = this.getClass().getDeclaredMethods();
         int index = list.indexOf(n == 0);
         return (n--) + (Integer) methods[index].invoke(this, n);
     }

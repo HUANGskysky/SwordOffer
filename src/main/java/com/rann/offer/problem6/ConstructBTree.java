@@ -26,7 +26,7 @@ public class ConstructBTree {
         }
 
         boolean flag = false;
-        BTreeNode root = new BTreeNode();
+        BTreeNode root = new BTreeNode(-1);
         for (int i = 0; i < preorder.length; i++) {
             if (inorder[i] == preorder[0]) {
                 flag = true;

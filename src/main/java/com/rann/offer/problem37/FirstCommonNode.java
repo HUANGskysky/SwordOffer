@@ -4,8 +4,9 @@ import com.rann.offer.node.ListNode;
 
 /**
  * Problem37
+ * 链表的第一个公共结点
  * way1 蛮力时间O(m*n)
- * way2 利用栈时间O(m+n) 空间O(m+n)
+ * way2 利用栈 时间O(m+n) 空间O(m+n)
  * way3 时间O(m+n)
  *
  * @author lemonjing
