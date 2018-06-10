@@ -1,9 +1,8 @@
 package com.rann.offer.Problem42;
 
-import java.util.Arrays;
-
 /**
  * Created by lemonjing on 2016/8/1.
+ * 翻转单词
  */
 public class ReverseWord {
     public String reverse(String s) {

@@ -16,7 +16,7 @@ class Problem27Test extends FunSuite with BeforeAndAfterEach {
   override def beforeEach() {
     root = new BTreeNode(10)
     val node1 = new BTreeNode(6)
-    val node2 = new BTreeNode(4)
+    val node2 = new BTreeNode(14)
     val node3 = new BTreeNode(4)
     val node4 = new BTreeNode(8)
     val node5 = new BTreeNode(12)
@@ -40,7 +40,7 @@ class Problem27Test extends FunSuite with BeforeAndAfterEach {
       datas.append(head.data)
       head = head.rightChild
     }
-    assert(datas.toList === List(4, 6, 8, 10, 12, 4, 16))
+    assert(datas.toList === List(4, 6, 8, 10, 12, 14, 16))
   }
 
 }

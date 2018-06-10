@@ -1,6 +1,6 @@
 package com.rann.offer.Problem45;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,19 +14,14 @@ public class JosephLoop {
             return -1;
         }
 
-        List<Integer> list = new LinkedList<>();
+        List<Integer> list = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             list.add(i);
         }
-
         // 要删除的元素位置
         int index = 0;
-
         while (list.size() > 1) {
-            for (int i = 1; i < m; i++) {
-                index = (index + 1) % list.size();
-            }
-
+            index = (index + m - 1) % list.size();
             list.remove(index);
         }
 

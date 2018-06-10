@@ -7,6 +7,7 @@ import java.util.Arrays;
  * 扑克牌的顺子
  * 0可以充当任意数
  *
+ * 如 0 1 3 4 5 => true
  * @author lemonjing
  */
 public class SortPoker {

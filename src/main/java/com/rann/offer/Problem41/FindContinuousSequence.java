@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * Problem41扩展 和为s的连续正数序列
+ * 输入15，由于1+2+3+4+5=4+5+6=7+8=15；所以打印出三个连续序列1~5,4~6,7~8；
  *
  * @author lemonjing
  */

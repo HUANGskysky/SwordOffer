@@ -2,6 +2,7 @@ package com.rann.offer.Problem42;
 
 /**
  * Created by lemonjing on 2016/8/1.
+ * 左旋字符串 abcdefg,2 => cdefgab
  */
 public class LeftReverse {
 
