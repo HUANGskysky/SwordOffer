@@ -4,3 +4,4 @@
 
 - [x] Java版本到剑指offer国内版全部50题
 - [x] Scala版本到剑指offer纪念版全部67题
+- [x] Scala版本单测在对应的test目录
