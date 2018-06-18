@@ -3,6 +3,9 @@ package com.scala.offer.Problem30
 /**
  * Created by Lemonjing on 2018/6/4.
  * Github: Lemonjing
+ *
+ * 最小的k个数字
+ *
  * 大顶堆法
  * 4, 5, 1, 6, 2, 7, 3, 8 => 1,2,3,4
  */
@@ -16,7 +19,7 @@ object Problem30 {
       return null
     }
     val kArr = ju.Arrays.copyOfRange(a, 0, k)
-    buildMaxHead(kArr)
+    buildMaxHeap(kArr)
     for (i <- k until a.length) {
       if (a(i) < kArr(0)) {
         kArr(0) = a(i)
@@ -26,7 +29,7 @@ object Problem30 {
     kArr
   }
 
-  private def buildMaxHead(a: Array[Int]) = {
+  private def buildMaxHeap(a: Array[Int]) = {
     for (i <- 0 until a.length / 2 reverse) {
       adjustHeap(a, i)
     }

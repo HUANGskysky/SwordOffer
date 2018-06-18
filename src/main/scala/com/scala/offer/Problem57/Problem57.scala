@@ -11,12 +11,12 @@ import com.scala.offer.Node.ListNode
 object Problem57 {
 
   def dedupNode(head: ListNode): ListNode = {
-    if (head == null) {
+    var _head = head
+    if (_head == null) {
       return null
     }
     var pre: ListNode = null
-    var cur = head
-    var _head = head
+    var cur = _head
     while (cur != null) {
       if (cur.next != null && cur.data == cur.next.data) {
         while (cur.next != null && cur.data == cur.next.data) {
@@ -35,6 +35,6 @@ object Problem57 {
         cur = cur.next
       }
     }
-    head
+    _head
   }
 }

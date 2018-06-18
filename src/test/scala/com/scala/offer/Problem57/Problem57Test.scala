@@ -14,9 +14,9 @@ class Problem57Test extends FunSuite with BeforeAndAfterEach {
   var list1 = new ListNode(1)
 
   override def beforeEach() {
-    val a = new ListNode(2)
+    val a = new ListNode(1)
     val b = new ListNode(3)
-    val c = new ListNode(3)
+    val c = new ListNode(4)
     val d = new ListNode(4)
     val e = new ListNode(4)
     val f = new ListNode(5)
@@ -40,7 +40,7 @@ class Problem57Test extends FunSuite with BeforeAndAfterEach {
       elements.append(newList.data)
       newList = newList.next
     }
-    assert(elements.toList === List(1,2,5))
+    assert(elements.toList === List(3,5))
   }
 
 }

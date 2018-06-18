@@ -28,8 +28,6 @@ object Problem44 {
       }
     }
 
-    println(gap)
-
     if (numOfZeros >= gap) true else false
   }
 }

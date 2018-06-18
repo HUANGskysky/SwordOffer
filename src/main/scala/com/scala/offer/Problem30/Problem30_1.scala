@@ -3,6 +3,9 @@ package com.scala.offer.Problem30
 /**
  * Created by Lemonjing on 2018/6/4.
  * Github: Lemonjing
+ *
+ * 最小的k个数字
+ *
  * 类快排的partition法
  * 4, 5, 1, 6, 2, 7, 3, 8 => 1,2,3,4
  */
