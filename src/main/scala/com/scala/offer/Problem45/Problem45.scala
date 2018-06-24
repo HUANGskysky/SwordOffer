@@ -5,6 +5,7 @@ import java.{util => ju}
 /**
  * Created by Lemonjing on 2018/6/9.
  * Github: Lemonjing
+ * 约瑟夫环
  *
  * 0,1,2,3,4 m=3 => 2,0,4,1 => 3
  */

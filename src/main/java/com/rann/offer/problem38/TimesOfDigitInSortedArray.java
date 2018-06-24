@@ -1,62 +1,37 @@
 package com.rann.offer.problem38;
 
-import java.util.Arrays;
-
 /**
  * 排序数组中指定数字出现的次数
  * 二分 firstK & lastK O(lgn)
  */
 public class TimesOfDigitInSortedArray {
 
-    /**
-     * @param a 排序数组
-     * @param k 待查找的数字
-     * @return 数字次数
-     */
-    public int getNumberOfK(int[] a, int k) {
-        int res = 0;
-        if (null == a || a.length <= 0) {
-            return 0;
+    public int GetNumberOfK(int[] a, int k) {
+        if (a == null || a.length <= 0) return 0;
+        int left = binarySearch(a, 0, a.length - 1, k);
+        if (left == -1) return 0;
+        int right = left;
+        while (left > 0 && a[left - 1] == k) {
+            left = binarySearch(a, 0, left - 1, k);
         }
-        if (a.length == 1) {
-            if (a[0] == k) {
-                return 1;
-            } else {
-                return 0;
-            }
+        while (right < a.length - 1 && a[right + 1] == k) {
+            right = binarySearch(a, right + 1, a.length - 1, k);
         }
-
-        if (k < a[a.length / 2]) {
-            res += getNumberOfK(Arrays.copyOfRange(a, 0, a.length / 2), k);
-        } else if (k > a[a.length / 2]) {
-            res += getNumberOfK(Arrays.copyOfRange(a, a.length / 2, a.length), k);
-        } else {
-            res += getCount(a, a.length / 2);
-        }
-
-        return res;
+        return right - left + 1;
     }
 
-    private int getCount(int[] a, int index) {
-        int k = a[index];
-        int res = 0;
-
-        for (int i = index; i < a.length; i++) {
-            if (a[i] == k) {
-                res++;
+    private int binarySearch(int[] a, int low, int high, int num) {
+        if (a == null || a.length <= 0) return -1;
+        while (low <= high) {
+            int mid = (low + high) >> 1;
+            if (a[mid] > num) {
+                high = mid - 1;
+            } else if (a[mid] < num) {
+                low = mid + 1;
             } else {
-                break;
+                return mid;
             }
         }
-
-        for (int i = index - 1; i >= 0; i--) {
-            if (a[i] == k) {
-                res++;
-            } else {
-                break;
-            }
-        }
-
-        return res;
+        return -1;
     }
 }

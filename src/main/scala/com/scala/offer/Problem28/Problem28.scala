@@ -14,7 +14,7 @@ object Problem28 {
   def permOfString(input: String): List[String] = {
     if (input == null || input.isEmpty) return null
     val low = 0
-    val high = input.length
+    val high = input.length - 1
     val list = new ListBuffer[String]
     permCore(input.toCharArray, low, high, list)
 
@@ -22,10 +22,11 @@ object Problem28 {
   }
 
   private def permCore(input: Array[Char], low: Int, high: Int, list: ListBuffer[String]):Unit = {
-    if (low == high - 1) {
+    if (low == high) {
+      // 允许重复 如aa=>aa,aa
       list.append(String.valueOf(input))
     } else {
-      for (i <- low until high) {
+      for (i <- low to high) {
         swap(input, i, low)
         permCore(input, low + 1, high, list)
         swap(input, i, low)

@@ -20,7 +20,8 @@ object Problem27 {
   def convert(root: BTreeNode): BTreeNode = {
     if (root == null) return null
     convertNode(root)
-    while (preNode != null && preNode.leftChild != null) {
+    if (preNode == null) return null
+    while (preNode.leftChild != null) {
       preNode = preNode.leftChild
     }
     preNode

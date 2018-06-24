@@ -4,7 +4,7 @@ package com.rann.offer.problem34;
  * Problem34
  * 求从小到大的第1500个丑数
  * 丑数:只包含因子2,3,5的数称为丑数
- *
+ * 该方法复杂度过大
  * @author lemonjing
  */
 public class UglyNumberWay1 {
@@ -34,6 +34,6 @@ public class UglyNumberWay1 {
             number /= 5;
         }
 
-        return (1 == number) ? true : false;
+        return 1 == number;
     }
 }

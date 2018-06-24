@@ -3,6 +3,7 @@ package com.scala.offer.Problem56
 /**
  * Created by Lemonjing on 2018/5/4.
  * Github: Lemonjing
+ * 字符流中第一个不重复的字符
  */
 object Problem56 {
 

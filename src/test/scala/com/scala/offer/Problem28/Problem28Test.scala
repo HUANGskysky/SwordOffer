@@ -10,5 +10,6 @@ class Problem28Test extends FunSuite {
 
   test("testPermOfString") {
     assert(Problem28.permOfString("abc") === List("abc", "acb", "bac", "bca", "cba", "cab"))
+    assert(Problem28.permOfString("aa") === List("aa", "aa"))
   }
 }

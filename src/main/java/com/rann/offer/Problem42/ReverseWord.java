@@ -9,6 +9,8 @@ public class ReverseWord {
         if (null == s || s.length() <= 0) {
             return null;
         }
+        //防止多个空格符
+        if (s.trim().equals("")) return s;
 
         String wholeReverse = core(s);
         String[] wholeReverseArr = wholeReverse.split(" ");
@@ -17,7 +19,7 @@ public class ReverseWord {
             sb.append(core(val)).append(" ");
         }
 
-        return sb.toString();
+        return sb.toString().trim();
     }
 
     private String core(String s) {

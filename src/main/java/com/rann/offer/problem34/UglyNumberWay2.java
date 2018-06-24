@@ -17,7 +17,7 @@ public class UglyNumberWay2 {
         int m2 = 0, m3 = 0, m5 = 0;
 
         for (int i = 1; i < uglyArr.length; i++) {
-            int min = Min(uglyArr[m2] * 2, uglyArr[m3] * 3, uglyArr[m5] * 5);
+            int min = getMin(uglyArr[m2] * 2, uglyArr[m3] * 3, uglyArr[m5] * 5);
 
             uglyArr[i] = min;
 
@@ -35,7 +35,7 @@ public class UglyNumberWay2 {
         return uglyArr[n - 1];
     }
 
-    private int Min(int number1, int number2, int number3) {
+    private int getMin(int number1, int number2, int number3) {
         int min = (number1 < number2) ? number1 : number2;
         return min < number3 ? min : number3;
     }

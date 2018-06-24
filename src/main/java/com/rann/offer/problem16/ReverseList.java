@@ -17,10 +17,7 @@ public class ReverseList {
         ListNode pre = null;
         ListNode cur = head;
         while (cur != null) {
-//            if (cur.next == null) {
-//                cur.next = pre;
-//                return cur;
-//            }
+            // 暂存next结点
             ListNode next = cur.next;
             cur.next = pre;
             pre = cur;

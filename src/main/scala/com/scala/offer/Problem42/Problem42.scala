@@ -17,7 +17,7 @@ object Problem42 {
       word => sb.append(core(word, 0, word.length -1)).append(" ")
     }
 
-    sb.toString
+    sb.toString.trim
   }
 
   private def core(s: String, low:Int, high:Int):String = {
@@ -35,6 +35,7 @@ object Problem42 {
 
   def main(args: Array[String]): Unit = {
     val a = "hello world hadoop."
-    println(reverseWord(a))
+    val res = reverseWord(a);
+    println(res)
   }
 }

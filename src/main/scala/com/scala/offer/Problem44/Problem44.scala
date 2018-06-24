@@ -3,6 +3,7 @@ package com.scala.offer.Problem44
 /**
  * Created by Lemonjing on 2018/5/1.
  * Github: Lemonjing
+ * 扑克牌的顺子
  *
  * 0 1 3 4 5 => true
  */

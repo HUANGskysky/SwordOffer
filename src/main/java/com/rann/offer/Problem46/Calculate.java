@@ -21,6 +21,7 @@ public class Calculate {
         List<Boolean> list = new ArrayList<>();
         list.add(false);
         list.add(true);
+        // getDeclaredMethods能拿到所有方法（不包括继承），getMethods只能拿到public方法（包括继承的类或接口的方法）
         Method[] methods = this.getClass().getDeclaredMethods();
         int index = list.indexOf(n == 0);
         return (n--) + (Integer) methods[index].invoke(this, n);

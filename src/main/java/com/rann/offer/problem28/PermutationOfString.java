@@ -7,6 +7,8 @@ import java.util.List;
  * Problemn28
  * 字符串的全排列
  *
+ * 涉及到2个问题，是否允许重复和字典序输出(可使用TreeSet)
+ *
  * @author lemonjing
  */
 public class PermutationOfString {
@@ -25,6 +27,8 @@ public class PermutationOfString {
 
     private void permCore(char[] a, int low, int high, List<String> list) {
         if (low == high) {
+            // 1.是否允许重复 如aa => aa,aa
+            // 2.字典序
             list.add(String.valueOf(a));
         } else {
             for (int i = low; i <= high; i++) {
@@ -41,3 +45,5 @@ public class PermutationOfString {
         a[j] = temp;
     }
 }
+
+
